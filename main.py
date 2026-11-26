@@ -31,7 +31,7 @@ MAX_CHARS = 120
 
 
 def validate(text: str) -> None:
-    """Raise ValueError if *text* is not a clean single-line entry."""
+    """Raise ValueError when *text* is not a clean single-line entry."""
     body = text[:-1] if text.endswith("\n") else text
     if not 1 <= len(body) <= MAX_CHARS:
         raise ValueError("entry length out of range")
